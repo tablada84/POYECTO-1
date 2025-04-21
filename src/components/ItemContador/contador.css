@@ -1,0 +1,10 @@
+.contador{
+    width: fit-content;
+    background-color: rgb(140, 141, 151);
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+.span{
+    color: aliceblue;
+}

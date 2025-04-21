@@ -1,0 +1,53 @@
+.navbar {
+    background-color: black;
+    color: rgb(139, 130, 130);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    font-size: 20px;
+  }
+  .caruso-wine {
+    font-size: 4rem;
+    width: 70px;
+  }
+  
+  .navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+  }
+  .navbar a {
+    color: inherit;
+    height: 200%;
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+    font-weight: 300;
+  }
+  
+  .navbar ul li a {
+    display: block;
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    border-radius: 50px;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .li a {
+    text-decoration: none;
+  
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgb(131, 123, 123);
+    transition: 0.3s ease-in-out;
+  }
+  li a:hover,
+  li a.active {
+    color: white;
+  }
