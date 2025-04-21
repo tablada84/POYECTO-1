@@ -9,15 +9,15 @@ id:1, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraU
   
 Marcas:"Mercedes Benz", precio:30000},
   {
-id:1, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s",
+id:2, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s",
 Marcas:"Maserati", precio:700000 
 },
   {
-id:1, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s",
+id:3, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s",
 Marcas:"BMW", precio:40000      
 },
   {
-id:1, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s",
+id:4, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s",
 Marcas:"Volvo",precio:200000
               },
 ]
@@ -26,7 +26,7 @@ export const ItemListContainer = ({texto}) => {
 
 const [data, setData]=useState([])
 
-
+const {categoriaId}= useParams
 
 useEffect(()=>{
 const getData = new Promise(resolve =>{
@@ -34,9 +34,16 @@ const getData = new Promise(resolve =>{
     resolve(autos)
   }, 3000)
 })
-getData.then(res => setData(res))
 
-},[])
+if(categoriaId){
+  getData.then(res=> setData(res.filter(autos=> autos.categori === categoriaId)))
+}else{
+  getData.then(res => setData(res))
+}
+
+
+
+},[categoriaId])
 
 const onAdd =(quantity)=>{
   console.log(`compraste ${quantity} unidades`)

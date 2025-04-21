@@ -13,7 +13,7 @@ export const NavBar = () => {
 
         <ul className="nav__list">
           <li>
-            <NavLink class="nav__link" to='/categoria/mercedes'>Mercedes</NavLink>
+            <NavLink class="nav__link" to='/categoria/Mercedes'>Mercedes</NavLink>
             </li>
             <li>
             <NavLink class="nav__link" to='/categoria/maserati'>Maserati</NavLink>
