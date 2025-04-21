@@ -5,38 +5,38 @@ import Title from "../Title";
 import { useParams } from "react-router-dom";
 const autos =[
   {
-id:1, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s",
+id:1, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s", categoria: "Mercedes Benz",
   
 Marcas:"Mercedes Benz", precio:30000},
   {
-id:2, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s",
+id:2, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s", categoria: "Maserati",
 Marcas:"Maserati", precio:700000 
 },
   {
-id:3, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s",
+id:3, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s", categoria: "BMW",
 Marcas:"BMW", precio:40000      
 },
   {
-id:4, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s",
+id:4, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzolJdgHgqraUidJCkI_pOJYNNBdqvFMSQ5A&s", categoria: "Volvo",
 Marcas:"Volvo",precio:200000
               },
 ]
 
 export const ItemListContainer = ({texto}) => {
 
-const [data, setData]=useState([])
+const [data, setData]=useState([]);
 
-const {categoriaId}= useParams
+const {categoriaId}= useParams();
 
 useEffect(()=>{
 const getData = new Promise(resolve =>{
   setTimeout(()=>{
     resolve(autos)
-  }, 3000)
+  }, 2000)
 })
 
 if(categoriaId){
-  getData.then(res=> setData(res.filter(autos=> autos.categori === categoriaId)))
+  getData.then(res=> setData(res.filter(auto=> auto.categoria === categoriaId)))
 }else{
   getData.then(res => setData(res))
 }

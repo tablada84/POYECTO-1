@@ -13,16 +13,16 @@ export const NavBar = () => {
 
         <ul className="nav__list">
           <li>
-            <NavLink class="nav__link" to='/categoria/Mercedes'>Mercedes</NavLink>
+            <NavLink className="nav__link" to='/categoria/Mercedes Benz'>Mercedes Benz</NavLink>
             </li>
             <li>
-            <NavLink class="nav__link" to='/categoria/maserati'>Maserati</NavLink>
+            <NavLink className="nav__link" to='/categoria/Maserati'>Maserati</NavLink>
             </li>
             <li>
-            <NavLink class="nav__link" to='/categoria/bmw'>BMW</NavLink>
+            <NavLink className="nav__link" to='/categoria/BMW'>BMW</NavLink>
             </li>
             <li>
-            <NavLink class="nav__link" to='/categoria/volvo'>Volvo</NavLink>
+            <NavLink className="nav__link" to='/categoria/Volvo'>Volvo</NavLink>
             </li>
            <li>
             <NavLink className="nav__link" to="cart">
